@@ -1,0 +1,41 @@
+{
+  "name": "pokedex-interactivo",
+  "version": "1.0.0",
+  "description": "Pokedex made with React.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brauliorivas/pokedex-interactivo.git"
+  },
+  "keywords": [
+    "React",
+    "Pokemon",
+    "API"
+  ],
+  "author": "Braulio Rivas Abad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brauliorivas/pokedex-interactivo/issues"
+  },
+  "homepage": "https://github.com/brauliorivas/pokedex-interactivo#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.1.51",
+    "@swc/core": "^1.2.103",
+    "css-loader": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
+    "swc-loader": "^0.1.15",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
