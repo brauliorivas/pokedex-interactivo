@@ -1,8 +1,11 @@
+@import 'vars';
+
 nav {
-    height: 50px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--black);
 
     img {
         height: 42px;
@@ -11,9 +14,17 @@ nav {
 }
 
 .navbar-menu {
-
     ul {
         display: flex;
         flex-direction: row;
+        list-style-type: none;
+        padding-right: 20px;
+
+        li {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 }
