@@ -1,16 +1,16 @@
 import { useEffect, useState} from 'react';
 
 const useGetPokemons = (APIpok) => {
-    const [pokemons, setPokemons] = useState([]);
+    const [pokedex] = useState([]);
 
     const fetchPokemons = async (API) => {
         const response = await fetch(API);
         const data = await response.json();
-        setPokemons([...pokemons, {
+        pokedex.push({
             name: data.name,
             id: data.id,
             sprites: data.sprites.front_default,
-        }]);
+        });
     }
 
     useEffect( () => {
@@ -18,9 +18,9 @@ const useGetPokemons = (APIpok) => {
             fetchPokemons(`${APIpok}${i}/`);
         }
     }, [])
-
-    return { 
-        pokemons
+   
+    return {
+        pokedex
     };
 }
 
