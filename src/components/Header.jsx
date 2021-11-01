@@ -11,9 +11,6 @@ const Header = () => {
             <div className="navbar-menu">
                 <ul>
                     <li>Favoritos</li>
-                    <li>Buscar</li>
-                    <li>Listar</li>
-                    <li>Mi perfil</li>
                 </ul>
             </div>
         </nav>

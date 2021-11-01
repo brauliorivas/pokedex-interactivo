@@ -1,0 +1,42 @@
+@import 'vars';
+
+.Searchbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    #logo {
+        height: 75px;
+        width: 188px;
+        align-self: center;
+    }
+
+    .searchbar-container {
+        width: 75%;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+
+        input {
+            font-family: var(--font);
+            width: 50%;
+            height: 40px;
+            margin-right: 80px;
+            padding-left: 20px;
+            border-bottom: 0.5px solid var(--input-border);
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 15px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+    }
+}
