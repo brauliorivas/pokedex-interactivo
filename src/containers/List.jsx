@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Item from '@components/Item';
 import AppPokemons from '@context/AppPokemons';
 
+const POKEDEX = [];
+
 const List = () => {
-    const [pokemons, loading] = useContext(AppPokemons);
-    console.log(loading)
-    console.log(pokemons)
-    if (loading) {
-        return <div>Loading...</div>
-    } else {
+    const { pokemons } = useContext(AppPokemons);
+
+    POKEDEX.push(...pokemons);
+
     return (
         <section className="main-container">
             <div className="main-head">
@@ -24,12 +24,11 @@ const List = () => {
                 </div>
             </div>
             <div className="pokemon-list">
-                {pokemons.map(pokemon => (
-                    <Item pokemon={pokemon} key={pokemon.id}/>
-                ))}
+                {/* {pokemons[0] == undefined ? <div>Loading</div> :  <Item key={pokemons[0].id} pokemon={pokemons[0]} />} */}
+                {POKEDEX.length == 898 ? POKEDEX.map(pokemon => <Item key={pokemon.id} pokemon={pokemon} />) : <div>Loading...</div>}
             </div>
         </section>
-    )};
+    );
 }
 
 export default List;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Item = ({pokemon}) => {
-
     return (
         <div className="item">
             <div className="pokemon-img">
