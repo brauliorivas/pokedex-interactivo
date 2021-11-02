@@ -10,7 +10,7 @@ const APIhabitat = 'https://pokeapi.co/api/v2/pokemon-habitat/';
 const APIgender = 'https://pokeapi.co/api/v2/gender/';
 
 const App = () => {
-    const Pokedex = useGetPokemons(APIpokemon);
+    const Pokedex = useGetPokemons(APIpokemon, APIhabitat, APIgender);
     return (
         <AppPokemons.Provider value={Pokedex}>
             <Layout>

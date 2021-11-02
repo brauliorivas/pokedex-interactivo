@@ -4,8 +4,7 @@ const Item = ({pokemon}) => {
     return (
         <div className="item">
             <div className="pokemon-img">
-                {/* <img src={pokemon.image.src}></img>  */}
-                {/* //https://pokeapi.co/api/v2/pokemon/{id}/ */} 
+                <img src={pokemon.sprites}></img>
             </div>
             <div className="item-menu">
                 <div className="item-menu-info">
