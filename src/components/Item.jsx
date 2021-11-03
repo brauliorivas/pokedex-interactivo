@@ -1,4 +1,5 @@
 import React from 'react';
+import '@styles/Item.scss';
 
 const Item = ({pokemon}) => {
     return (
@@ -9,22 +10,27 @@ const Item = ({pokemon}) => {
             <div className="item-menu">
                 <div className="item-menu-info">
                     <div className="item-name">
-                        {pokemon.name} 
+                        {`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1, pokemon.name.length)}`} 
                     </div>
                     <div className="item-id">
-                        {pokemon.id} 
+                        #{pokemon.id} 
                     </div>
                 </div>
                 <div className="item-actions">
                     <div className="item-characteristics">
-                        <div className="item-characteristics-habitat">
+                        <div className="item-characteristics-el">
+                            Habitat
                             {/* {pokemon.habitat}  */}
                             {/* {https://pokeapi.co/api/v2/pokemon-habitat/{id or name}/} */}
                         </div>
-                        <div className="item-characteristics-gender">
+                        <div className="item-characteristics-el">
+                            Genero
                             {/* {pokemon.gender} */}
                             {/* {https://pokeapi.co/api/v2/gender/{id or name}/} */}
                         </div>
+                    </div>
+                    <div className="favorite">
+                        <p>F</p>
                     </div>
                 </div>
             </div>

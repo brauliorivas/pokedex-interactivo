@@ -1,0 +1,38 @@
+.main-container {
+    width: 100%;
+    .main-head {
+        width: 100%;
+        
+        p {
+            font-family: var(--font);
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 0px;
+            color: var(--poke-blue);
+        }
+
+        .list-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            height: 100px;
+            align-items: center;
+
+            .page {
+                font-family: var(--font);
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0px;
+                color: var(--black);
+            }
+        }
+    }
+
+    .pokemon-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-items: center;
+    }
+}

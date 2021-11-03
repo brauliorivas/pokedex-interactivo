@@ -2,7 +2,6 @@ import React from "react";
 import AppPokemons from "@context/AppPokemons";
 import useGetPokemons from "@hooks/useGetPokemons";
 import Layout from "@containers/Layout";
-import List from '@containers/List';
 import '@styles/global.css';
 
 const APIpokemon = 'https://pokeapi.co/api/v2/pokemon/';
@@ -13,9 +12,7 @@ const App = () => {
     const Pokedex = useGetPokemons(APIpokemon, APIhabitat, APIgender);
     return (
         <AppPokemons.Provider value={Pokedex}>
-            <Layout>
-                <List/>
-            </Layout>
+            <Layout />
         </AppPokemons.Provider>
     );
 }
