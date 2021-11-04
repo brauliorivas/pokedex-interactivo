@@ -1,0 +1,33 @@
+.favorite-pokemon {
+    width: 150px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 4px;
+    justify-content: space-evenly;
+    background-color: var(--grey);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .pokemon-img-fav {
+        margin-left: 0px;
+        height: 100%;
+    }
+
+    .remove-icon {
+        height: 20px;
+        margin-left: 5px;
+    }
+
+    .remove-icon:hover {
+        cursor: pointer;
+    }
+
+    .favorite-pokemon_name {
+        font-weight: 500;
+    }
+}

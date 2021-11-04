@@ -22,17 +22,20 @@
         height: 100%;
         align-self: flex-start;
         padding-top: 5px;
+        width: 100%;
 
         .item-menu-info {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
             .item-name {
                 margin-right: 40%;
                 color: var(--black);
                 font-weight: 420;
+                font-size: 20px;
+                font-weight: 500;
             }
 
             .item-id {
@@ -46,10 +49,39 @@
                 width: 100%;
                 display: flex;
                 flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
 
                 .item-characteristics-el {
                     margin-left: 5px;
                     margin-right: 5px;
+                    padding: 5px 10px 5px 10px;
+                    border-radius: 5px;
+                }
+                
+                .habitat {
+                    border: 2px solid var(--red);
+                    background-color: var(--rose);
+                }
+
+                .gender {
+                    background-color: var(--light-blue);
+                    border: 2px solid var(--blue);
+                }
+
+                .favorite {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .favorite-img {
+                        height: 20px;
+                    }
+
+                    .favorite-img:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }

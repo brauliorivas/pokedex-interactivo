@@ -57,11 +57,11 @@ const List = () => {
                 <p>Pokedex</p>
                 <div className="list-menu">
                     <div className="list-menu-previous" onClick={previousPage}>
-                        <Button value={'Previous'}/>
+                        <Button value={'Anterior'}/>
                     </div>
                     <p className="page">{page[0]} - {page[1]}</p>
                     <div className="list-menu-next" onClick={nextPage}>
-                        <Button value={'Next'} />    
+                        <Button value={'Siguiente'} />    
                     </div>
                 </div>
             </div>

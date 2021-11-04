@@ -1,12 +1,15 @@
 @import 'vars';
 
 nav {
+    top: 0;
+    position: fixed;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--black);
-
+    background-color: var(--grey);
     img {
         height: 42px;
         margin-left: 15px;
@@ -19,12 +22,39 @@ nav {
         flex-direction: row;
         list-style-type: none;
         padding-right: 20px;
-
+        
         li {
+            display: flex;
+            align-items: center;
             padding-left: 5px;
             padding-right: 5px;
             margin-left: 10px;
             margin-right: 10px;
+
+            .counter {
+                font-size: 10px;
+                margin: 0px 0px 5px 0px;
+                color: var(--white);
+                background-color: var(--black);
+                padding: 0px 2px 0px 2px;
+                border-radius: 5px;
+            }
+
+            .favorites:hover {
+                cursor: pointer;
+                background-color: var(--dark-grey);
+                border-radius: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        .heart {
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
         }
     }
 }

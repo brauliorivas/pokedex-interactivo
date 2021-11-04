@@ -23,7 +23,7 @@ const Searchbar = () => {
             <div className="searchbar-container">
                 <input type="text" placeholder="Buscar pokemon..." onChange={() => handleInput()} ref={value} />
                 <div className="button" onClick={clearValue}>
-                    <Button value="Clear" />
+                    <Button value="Limpiar" />
                 </div>
             </div>
         </div>

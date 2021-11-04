@@ -1,0 +1,46 @@
+.pok-favorites {
+    position: absolute;
+    background-color: var(--white);
+    flex-direction: column;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 85px;
+    right: 40px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+    .pok-favorites-title {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .close-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        height: 23px;
+        margin-top: 5px;
+        width: 40%;
+        margin-left: auto;
+
+        .close-menu-img {
+            height: 17px;
+            margin-right: 6px;
+        }
+        .close-menu-title {
+            margin-bottom: 0px;
+            text-align: right;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+    }
+
+    .close-menu:hover {
+        cursor: pointer;
+    }
+}
