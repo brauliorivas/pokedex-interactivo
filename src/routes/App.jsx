@@ -6,7 +6,6 @@ import '@styles/global.css';
 import AppShowFavorites from "@context/AppShowFavorites";
 const APIpokemon = 'https://pokeapi.co/api/v2/pokemon/';
 
-
 const App = () => {
     const Pokedex = useGetPokemons(APIpokemon);
     const [show, setShow] = React.useState(AppShowFavorites);

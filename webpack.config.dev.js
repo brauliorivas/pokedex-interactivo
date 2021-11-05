@@ -1,9 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {InjectManifest} = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
+    stats: {
+        warnings: false,
+        errors: true,
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -53,7 +58,18 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-        })
+        }),
+        new InjectManifest({
+            swSrc: path.join(process.cwd(), '/sw.js'),
+            swDest: 'sw.js',
+            exclude: [
+                /\.map$/,
+                /manifest$/,
+                /\.htaccess$/,
+                /service-worker\.js$/,
+                /sw\.js$/,
+            ],
+        }),
     ],
     devServer: {
         static: {
