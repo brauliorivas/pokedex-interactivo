@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --config webpack.config.dev.js"
+    "dev": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "@swc/cli": "^0.1.51",
     "@swc/core": "^1.2.103",
     "css-loader": "^6.5.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.3",
     "react": "^17.0.2",
@@ -34,6 +36,7 @@
     "sass-loader": "^12.2.0",
     "style-loader": "^3.3.1",
     "swc-loader": "^0.1.15",
+    "terser-webpack-plugin": "^5.2.4",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1",
