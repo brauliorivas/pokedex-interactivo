@@ -7,25 +7,26 @@ import '@styles/List.scss';
 import Button from '@components/Button';
 
 const List = () => {
+    const MAX = 24;
     const [pokedex] = useState(useContext(AppPokemons));
-    const [page, setPage] = useState([1, 25]);
+    const [page, setPage] = useState([1, MAX]);
     const [search, setSearch] = useContext(AppSearch);
     const [notFound, setnotFound] = useState(false);
     const found = pokedex.some(pokemon => pokemon.name.toLowerCase().slice(0, search.length) === search.toLowerCase());
 
     const previousPage = () => {
-        if (page[0] - 25 < 1) {
-            setPage([1, 25]);
+        if (page[0] - MAX < 1) {
+            setPage([1, MAX]);
         } else {
-            setPage([page[0] - 25, page[1] - 25]);
+            setPage([page[0] - MAX, page[1] - MAX]);
         }
     }
 
     const nextPage = () => {
-        if (page[1] + 25 > 898) {
-            setPage([pokedex.length - 25, pokedex.length]);
+        if (page[1] + MAX > 898) {
+            setPage([pokedex.length - MAX, pokedex.length]);
         } else {
-            setPage([page[0] + 25, page[1] + 25]);
+            setPage([page[0] + MAX, page[1] + MAX]);
         }
     }
 
